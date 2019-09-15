@@ -186,6 +186,24 @@
           }
         ]
       },
+       {
+        "text": "Please tell me Facebook's open price",
+        "intent": "price_search",
+        "entities": [
+          {
+            "start": 15,
+            "end": 22,
+            "value": "FB",
+            "entity": "company"
+          },
+          {
+            "start": 26,
+            "end": 35,
+            "value": "close price",
+            "entity": "adj"
+          }
+        ]
+      },
       {
         "text": "tell me Tesla's high price",
         "intent": "price_search",
@@ -319,12 +337,12 @@
         "entities": []
       },
       {
-        "text": "a cheap hotel in the north",
-        "intent": "hotel_search",
+        "text": "Amazon's lateset price",
+        "intent": "price_search",
         "entities": [
           {
-            "start": 2,
-            "end": 7,
+            "start": 0,
+            "end": 5,
             "value": "cheap",
             "entity": "price"
           },
@@ -338,7 +356,7 @@
       },
       {
         "text": "an expensive hotel in the south",
-        "intent": "hotel_search",
+        "intent": "price_search",
         "entities": [
           {
             "start": 3,
@@ -353,47 +371,6 @@
             "entity": "location"
           }
         ]
-      },
-      {
-        "text": "a hotel in the downtown",
-        "intent": "hotel_search",
-        "entities": [
-          {
-            "start": 15,
-            "end": 23,
-            "value": "downtown",
-            "entity": "location"
-          }
-        ]
-      },
-      {
-        "text": "in the north of town",
-        "intent": "location",
-        "entities": [
-          {
-            "start": 7,
-            "end": 12,
-            "value": "north",
-            "entity": "location"
-          }
-        ]
-      },
-      {
-        "text": "in the south of town",
-        "intent": "location",
-        "entities": [
-          {
-            "start": 7,
-            "end": 12,
-            "value": "south",
-            "entity": "location"
-          }
-        ]
-      },
-      {
-        "text": "I want a mid range hotel",
-        "intent": "",
-        "entities": []
       }
     ]
   }
