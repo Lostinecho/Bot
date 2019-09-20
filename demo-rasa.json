@@ -353,24 +353,6 @@
             "entity": "area"
           }
         ]
-      },
-      {
-        "text": "an expensive hotel in the south",
-        "intent": "price_search",
-        "entities": [
-          {
-            "start": 3,
-            "end": 12,
-            "value": "expensive",
-            "entity": "price"
-          },
-          {
-            "start": 26,
-            "end": 31,
-            "value": "south",
-            "entity": "location"
-          }
-        ]
       }
     ]
   }
