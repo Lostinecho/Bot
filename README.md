@@ -19,13 +19,15 @@ pipeline: "spacy_sklearn"
 
 
 数据中使用了四个公司的缩写作为测试（因为没有查找到其他更多美股的缩写，故暂用这四家公司）
-8个greet，打招呼
-4个deny,否认
-4个affirm，确认
-5个thankyou，感谢
-8个price_search，搜索公司
-3个introduce，自我介绍
-8个goodbye，再见
+数据结构：
+  文本类型	      含义	   数量	举例
+  greet，       打招呼，    8，hello
+  deny,         否认,      4，no
+  affirm，      确认,       4， yes
+  thankyou，    感谢,       5，thanks
+  price_search，搜索公司,    8, show me Apple's latest price
+  introduce，   自我介绍，   3,I'm Tom
+  goodbye，     再见，       8, good bye
 
 
 参考网站：
