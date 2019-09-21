@@ -1,4 +1,4 @@
-说明
+说明:
 ======
 * 本程序实现的是在telegram平台上的英文自动问答机器人，是基于rasa-0.15.1版本及其支持的外部组件实现的。
 
@@ -46,6 +46,6 @@ a = Stock(sym, token="your iex token")
 
 [rasa官网](https://rasa.com/docs/rasa/nlu/)
 
-[Scrapy]（https://scrapy.org/）
+[Scrapy](https://scrapy.org/）
 
 [telegram bot的官方教学，里面提供了搭建机器人的基础代码](https://core.telegram.org/bots)
