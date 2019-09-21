@@ -1,27 +1,27 @@
 说明
-------
-*本程序实现的是在telegram平台上的英文自动问答机器人，是基于rasa-0.15.1版本及其支持的外部组件实现的。
+======
+  *本程序实现的是在telegram平台上的英文自动问答机器人，是基于rasa-0.15.1版本及其支持的外部组件实现的。
 
-*会话管理使用的是rasa-core
+  *会话管理使用的是rasa-core
 
-*在终端中安装rasa_nlu的0.15.1版本
+  *在终端中安装rasa_nlu的0.15.1版本
 
-*rasa的language为英文：
+  *rasa的language为英文：
 
 ‘language: "en"’
 
 *rasa的pipeline配置如下：
 
-’pipeline: "spacy_sklearn"‘
+`pipeline: "spacy_sklearn"`
 
 在telegram bot中与bot_father对话以获得自己的机器人，得到token后即可放入程序中使用
-···
-TOKEN = "your bot token"
-···
+```
+`TOKEN = "your bot token"`
+```
 同时也将获取美股的API放入token（以上两个步骤都需注册才能获得自己专属的token）
-···
+```
 a = Stock(sym, token="your iex token")
-···
+```
 
 数据中使用了四个公司的缩写作为测试，分别是·Facebook··Tesla··Apple··Amazon·（因为没有查找到其他更多美股的缩写，故暂用这四家公司）
 
