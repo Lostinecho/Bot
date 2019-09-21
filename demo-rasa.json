@@ -199,7 +199,25 @@
           {
             "start": 26,
             "end": 35,
-            "value": "close price",
+            "value": "open price",
+            "entity": "adj"
+          }
+        ]
+      },
+      {
+        "text": "Amazon's low price",
+        "intent": "price_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "AMZN",
+            "entity": "company"
+          },
+          {
+            "start": 9,
+            "end": 17,
+            "value": "low price",
             "entity": "adj"
           }
         ]
@@ -335,24 +353,6 @@
         "text": "have a good one",
         "intent": "goodbye",
         "entities": []
-      },
-      {
-        "text": "Amazon's lateset price",
-        "intent": "price_search",
-        "entities": [
-          {
-            "start": 0,
-            "end": 5,
-            "value": "cheap",
-            "entity": "price"
-          },
-          {
-            "start": 21,
-            "end": 26,
-            "value": "north",
-            "entity": "area"
-          }
-        ]
       }
     ]
   }
