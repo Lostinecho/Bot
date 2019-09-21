@@ -14,16 +14,16 @@ language: "en"
 ```
 pipeline: "spacy_sklearn"
 ```
-在telegram bot中与bot_father对话以获得自己的机器人，得到token后即可放入程序中使用
+* 在telegram bot中与bot_father对话以获得自己的机器人，得到token后即可放入程序中使用
 ```
 TOKEN = "your bot token"
 ```
-同时也将获取美股的API放入token（以上两个步骤都需注册才能获得自己专属的token）
+* 同时也将获取美股的API放入token（以上两个步骤都需注册才能获得自己专属的token）
 ```
 a = Stock(sym, token="your iex token")
 ```
 
-数据中使用了四个公司的缩写作为测试，分别是`Facebook``Tesla``Apple``Amazon`（因为没有查找到其他更多美股的缩写，故暂用这四家公司）
+* 数据中使用了四个公司的缩写作为测试，分别是`Facebook``Tesla``Apple``Amazon`（因为没有查找到其他更多美股的缩写，故暂用这四家公司，如有其他需要可专门添加）
 
 数据结构：
 =====
@@ -34,6 +34,7 @@ a = Stock(sym, token="your iex token")
   affirm|确认|4|yes
   thankyou|感谢|5|thanks
   price_search|搜索公司|8|show me Apple's latest price
+  company|公司名称|4
   adj|某个价格|6|low price
   introduce|自我介绍|3|I'm Tom
   goodbye|再见|8|good bye
@@ -46,6 +47,6 @@ a = Stock(sym, token="your iex token")
 
 [rasa官网](https://rasa.com/docs/rasa/nlu/)
 
-[Scrapy](https://scrapy.org/）
+[Scrapy](https://scrapy.org/)
 
 [telegram bot的官方教学，里面提供了搭建机器人的基础代码](https://core.telegram.org/bots)
