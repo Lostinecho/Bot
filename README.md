@@ -34,7 +34,7 @@ a = Stock(sym, token="your iex token")
   affirm|确认|4|yes
   thankyou|感谢|5|thanks
   price_search|搜索公司|8|show me Apple's latest price
-  company|公司名称|4
+  company|公司名称|4|Apple
   adj|某个价格|6|low price
   introduce|自我介绍|3|I'm Tom
   goodbye|再见|8|good bye
