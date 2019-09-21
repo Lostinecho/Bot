@@ -10,8 +10,8 @@ from rasa_nlu import config
 from rasa_nlu.model import Trainer
 INIT = 0
 
-# Define the CHOOSE_COFFEE state
-CHOOSE_COFFEE = 1
+# Define the ASK state
+ASK = 1
 
 # Define the ORDERED state
 NEXT = 2
@@ -42,21 +42,6 @@ class LastMessage:
 
 def start(bot, update):
     bot.send_message(chat_id=update.message.chat_id, text="I'm a bot, you can ask me about finance!")
-
-def replace_pronouns(message):#反问
-    if '\b(I)\b' in message:
-        # Replace 'me' with 'you'
-        return message.replace('me','you')
-    if '\b(my)\b' in message:
-        # Replace 'my' with 'your'
-        return message.replace('my','your')
-    if '\b(your)\b' in message:
-        # Replace 'your' with 'my'
-        return message.replace('your','my')
-    if 'you' in message:
-        # Replace 'you' with 'me'
-        return message.replace('you','I')
-    return message
 
 def match_intent(message):#正常交流
     matched_intent = None
@@ -133,9 +118,9 @@ def divide(message):
         return "'s latest price is ",'latestPrice'
     elif 'extended price' in msg:
         return "'s extended price is ",'extendedPrice'
-    elif 'high' in msg:
+    elif 'high price' in msg:
         return "'s high price is ",'high'
-    elif 'low' in msg:
+    elif 'low price' in msg:
         return "'s low price is ",'low'
     elif 'open price' in msg:
         return "'s open price is ",'open'
@@ -161,15 +146,15 @@ def respond(bot, update):
         if intent == 'price_search':
             new,before_com,before_sym,state = price_search(update.message.text)
         policy = {
-            (INIT, "price_search"): (CHOOSE_COFFEE, "ok, sure?"),
-            (CHOOSE_COFFEE, "affirm"): (NEXT, new + "Do you want to know more?"),
+            (INIT, "price_search"): (ASK, "ok, sure?"),
+            (ASK, "affirm"): (NEXT, new + "Do you want to know more?"),
             (NEXT, "price_search"): (INIT, new),
-            (CHOOSE_COFFEE, "price_search"): (INIT, new),
-            (MORE1, "price_search"):(CHOOSE_COFFEE,"ok, sure?"),
+            (ASK, "price_search"): (INIT, new),
+            (MORE1, "price_search"):(ASK,"ok, sure?"),
             (MORE2, "price_search"):(INIT,"what do you want to know about it?"),
             (NEXT, "deny"): (INIT, "byebye"),
-            (NEXT, "affirm"): (CHOOSE_COFFEE, "what do you want to know?"),
-            (CHOOSE_COFFEE, "deny"): (INIT, "byebye"),
+            (NEXT, "affirm"): (ASK, "what do you want to know?"),
+            (ASK, "deny"): (INIT, "byebye"),
         }
         new_state, update.message.text = policy[(state, intent)]
         bot.send_message(chat_id=update.message.chat_id, text=update.message.text)
