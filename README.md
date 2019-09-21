@@ -57,6 +57,6 @@ a = Stock(sym, token="your iex token")
 
 [rasa官网](https://rasa.com/docs/rasa/nlu/)
 
-[Scrapy](https://scrapy.org/)
+[scrapy官网](https://scrapy.org/)
 
 [telegram bot的官方教学，里面提供了搭建机器人的基础代码](https://core.telegram.org/bots)
