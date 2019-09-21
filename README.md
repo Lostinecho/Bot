@@ -39,7 +39,7 @@ pipeline: "spacy_sklearn"
 
 参考网站：
 
-[提供获取美国股市的API](https://iexcloud.io/)
+[提供获取美国股市信息的API](https://iexcloud.io/)
 
 [rasa官网](https://rasa.com/docs/rasa/nlu/)
 
