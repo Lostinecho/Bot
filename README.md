@@ -1,6 +1,16 @@
+DEMO-GIF:
+=====
+* 打招呼
+
+![image](https://github.com/Lostinecho/Bot/blob/master/gif2.gif)
+
+* 一次完整的查询
+
+![image](https://github.com/Lostinecho/Bot/blob/master/gif1.gif)
+
 说明:
 ======
-* 本程序实现的是在telegram平台上的英文自动问答机器人，是基于rasa-0.15.1版本及其支持的外部组件实现的。
+* 本程序实现的是在telegram平台上的英文自动问答查询股票信息的机器人，是基于rasa-0.15.1版本及其支持的外部组件实现的。
 
 * 会话管理使用的是rasa-core
 
